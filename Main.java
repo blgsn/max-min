@@ -1,8 +1,11 @@
 
+
 import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
-		int min=0,max=0;
+		 int min = Integer.MAX_VALUE;
+		    int max = Integer.MIN_VALUE;
+
 	 Scanner input = new Scanner(System.in);
      System.out.print("kaç tane sayı gireceksiniz ?");
      int number = input.nextInt();
@@ -10,17 +13,12 @@ public class Main {
      for(int i=1;i<=number;i++) {
     	 System.out.print(i+".sayıyı giriniz.");
          int n = input.nextInt(); 
-        
-        
-          if(n>max) {
-        	 max=n;
-        	 min=n;
-        	 
+       
+         if (n < min) {
+             min = n;
          }
-          else if(n<min) 
-         {
-        	 min=n;
-        	 
+         if (n > max) {
+            max = n;
          }
      }
        System.out.println("minimum :"+min);
